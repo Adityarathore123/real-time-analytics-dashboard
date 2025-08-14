@@ -1,0 +1,56 @@
+/* ✅ Charts Row Container */
+.charts-row {
+  display: flex;
+  flex: 1;
+  gap: 2rem; /* More gap between charts */
+}
+
+/* ✅ Chart Card Styling */
+.chart-card {
+  flex: 1 1 50%; /* Each chart takes ~50% of row */
+  background-color: white;
+  padding:1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 240px; /* Prevents chart from becoming too small */
+  margin-left: 90px;
+  margin-right: 0px;
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ✅ Chart Title */
+.chart-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+/* ✅ Dark Mode Support */
+body.dark .chart-card {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark .chart-title {
+  color: #fff;
+}
+
+/* ✅ Bigger Charts */
+.recharts-responsive-container {
+  width: 100% !important;
+  height: 250px !important; /* Increased height */
+}
+
+/* ✅ Mobile Fix */
+@media (max-width: 768px) {
+  .charts-row {
+    flex-direction: column;
+  }
+}
